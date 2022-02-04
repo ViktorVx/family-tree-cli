@@ -1,5 +1,7 @@
 package org.pva.familytreecli;
 
+import lombok.RequiredArgsConstructor;
+import org.pva.familytreecli.graph.AppGraph;
 import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +12,10 @@ import java.util.Scanner;
 import static java.lang.System.exit;
 
 @SpringBootApplication
+@RequiredArgsConstructor
 public class FamilyTreeCliApplication implements CommandLineRunner {
+
+	private final AppGraph appGraph;
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(FamilyTreeCliApplication.class);
